@@ -1,0 +1,14 @@
+<h1>Artist ฅ(ٛ•௰• ٛ )</h1>
+<div class="artist">
+	<h2><%= @artist.name %></h2>
+	<h3>Nationality: <%= @artist.nationality %></h3>
+	<img src="<%= @artist.photo_url %>" width="400px" height="300px">
+</div>
+<h1>Songs ฅ(ٛ•௰• ٛ )</h1>
+<% @songs.each do |song| %>
+	<div class="song">
+		<h2>Song: <%= song.title %></h2>
+		<h4>Album: <%= song.album %></h4>
+		<a href="<%= song.preview_url %>">Preview</a>
+	</div>
+<% end %>

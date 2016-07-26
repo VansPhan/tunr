@@ -1,0 +1,12 @@
+.remove {
+    display: inline-block;
+    float: right;
+}
+
+.artist {
+    margin: 0 auto;
+    margin-bottom: 100px;
+    padding: 20px;
+    width: 500px;
+    border: 2px solid black;
+}

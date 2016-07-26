@@ -1,0 +1,12 @@
+<h1>Artists <a href="/artist/new">+</a></h1>
+<% @artists.each do |artist| %>
+	<div class="artist">
+		<h2><a href="/artist/<%= artist.id %>"><%= artist.name %></a> | <a href="/artist/<%= artist.id %>/edit">edit</a></h2>
+		<form class="remove" action="/artist/<%= artist.id %>" method="post">
+			<input type="hidden" name="_method" value="delete">
+			<input type="submit" value="delete">
+		</form>
+		<h2>Nationality: <%= artist.nationality %></h2>
+		<img src="<%=artist.photo_url%>" width="400px" height="300px">
+	</div>
+<% end %>
